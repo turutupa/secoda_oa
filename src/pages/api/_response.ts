@@ -1,5 +1,8 @@
 import { IResponse } from "../../../models/response";
 
+// All api responses should return either success or failed 
+// for consistency
+
 export function success<T = any>(data: T): IResponse<T> {
   return response<T>(true, data, "")
 }
