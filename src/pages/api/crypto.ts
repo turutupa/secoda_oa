@@ -4,6 +4,12 @@ import { IResponse } from '../../../models/response';
 import { ICrypto } from '../../../models/crypto';
 import { success, failed } from './_response';
 
+const API = 'https://sandbox-api.coinmarketcap.com' // move this elsewhere if re-used in diff handlers
+const CRYPTO_API = `${API}/v1/cryptocurrency`
+const endpoint = ((endpoint: string) => `${CRYPTO_API}${endpoint}`)
+const listings = endpoint("/listings/new")
+// ... expand here with additional endpoints
+
 type CryptoResponse = IResponse<ICrypto>
 
 export default async function handler(
@@ -20,7 +26,7 @@ async function get(
   res: NextApiResponse<CryptoResponse>
 ) {
   try {
-    const response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/new', {
+    const response = await axios.get(listings, {
       headers: {
         'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY,
       },

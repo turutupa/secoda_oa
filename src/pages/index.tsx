@@ -14,7 +14,7 @@ export default function Home() {
       setCryptoData(x)
     });
     const seconds = 1000
-    const intervalId = setInterval(fetchCryptoData, 10 * seconds); // 10000 ms = 10 s
+    const intervalId = setInterval(fetchCryptoData, 60 * seconds); // 60000 ms = 60 s
     // Clear interval when the component unmounts
     return () => clearInterval(intervalId);
   }, [])
