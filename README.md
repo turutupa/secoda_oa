@@ -6,7 +6,7 @@
     - Mantine UI libraries
     - axios for making API requests
 - Data models at /models
-- API Handler for Crypto API: https://coinmarketcap.com/api/documentation/v1/ 
+- API Handler for [Crypto API](https://coinmarketcap.com/api/documentation/v1/) - see src/pags/api/crypto.ts
 - ... including a consistent way of responding to internal APIs - see src/pages/api/_response.ts
 - Table rendering cryptocurrency information at src/pages/index.tsx
 
