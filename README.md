@@ -1,7 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Secoda 
+
+## Project summary 
+### Included in this 2 ~ 3 hours project 
+- Libraries
+    - Mantine UI libraries
+    - axios for making API requests
+- Data models at /models
+- API Handler for Crypto API: https://coinmarketcap.com/api/documentation/v1/ 
+- ... including a consistent way of responding to internal APIs - see src/pages/api/_response.ts
+- Table rendering cryptocurrency information at src/pages/index.tsx
+
+### Not included
+- State management library as the project was so small it didn't make sense to use one
+- Proper icons - used emojis instead, ran out of time
+
+## Candidate experience
+The online assignment was alright, but I do think there's some room to tweak it for the better. First off, it wasn't too long, but needing to add and use external libraries could eat up some extra time. I kinda think using libraries we already know might make things smoother for us candidates. 
+
+The real headache came when dealing with the Crypto API. The responses I got from the API were different from what was promised in the docs - some properties were missing. That took up way more time than it should've, so I decided to just roll with what I had.
+
+All in all, it was a decent experience, although some parts were a bit vague. Like, the task was to build a React app that shows a table of the top 10 results from a crypto API, refreshing every minute. But what exactly does "top 10 results" mean here? I thought about shooting out an email for clarification, but I was worried it would take too long to get a reply.
+
+So, overall, it was a good experience. But with clearer instructions and less API drama, it could've been a lot smoother, and more about showing off coding chops.
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
